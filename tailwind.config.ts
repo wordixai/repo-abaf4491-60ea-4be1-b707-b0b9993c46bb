@@ -84,11 +84,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'typewriter': {
+					'0%, 50%': { 'border-right-color': 'transparent' },
+					'51%, 100%': { 'border-right-color': 'currentColor' }
+				},
+				'glow': {
+					'0%': { 'box-shadow': '0 0 5px rgba(99, 102, 241, 0.5)' },
+					'100%': { 'box-shadow': '0 0 20px rgba(99, 102, 241, 0.8), 0 0 30px rgba(99, 102, 241, 0.4)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'morph': {
+					'0%, 100%': { 'border-radius': '50%', transform: 'rotate(0deg)' },
+					'25%': { 'border-radius': '25%', transform: 'rotate(90deg)' },
+					'50%': { 'border-radius': '10%', transform: 'rotate(180deg)' },
+					'75%': { 'border-radius': '25%', transform: 'rotate(270deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'typewriter': 'typewriter 2s steps(40) infinite',
+				'glow': 'glow 2s ease-in-out infinite alternate',
+				'float': 'float 3s ease-in-out infinite',
+				'morph': 'morph 4s ease-in-out infinite'
+			},
+			fontFamily: {
+				'mono': ['JetBrains Mono', 'Monaco', 'Cascadia Code', 'Segoe UI Mono', 'Roboto Mono', 'monospace']
 			}
 		}
 	},
